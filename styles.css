@@ -17,12 +17,13 @@ html {
 .container {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
 /* Navigation */
 .navbar {
   width: 100%;
-  height: 10rem;
+  height: 8rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -207,6 +208,64 @@ html {
   position: relative;
 }
 
+/* Fix banner text width for small screens */
+@media (max-width: 768px) {
+  .banner p {
+    width: 90%; /* Instead of fixed 60rem */
+    max-width: 60rem;
+    margin: 0 auto 2rem auto;
+  }
+  
+  .menu-right-images {
+    width: 100%; /* Make images container full width */
+    padding: 0 2rem;
+  }
+  
+  .customers-banner p {
+    width: 90%; /* Instead of fixed 60rem */
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+}
+
+/* Fix contact form width issues */
+@media (max-width: 900px) {
+  .input-group input,
+  textarea,
+  .contact-btn {
+    width: 90%; /* Instead of fixed width */
+    max-width: 60rem;
+    margin: 2rem auto;
+  }
+  
+  .contact-right form {
+    width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+/* Additional responsive fixes */
+@media (max-width: 450px) {
+  .menu-right-images {
+    justify-content: center;
+  }
+  
+  .menu-img-wrapper {
+    width: 90%; /* Make images responsive */
+    margin: 1rem auto;
+  }
+  
+  .client {
+    width: 90%;
+    margin: 1rem auto;
+  }
+  
+  .about div {
+    width: 90%;
+    max-width: 60rem;
+  }
+}
+
 .banner {
   position: absolute;
   top: 20%;
@@ -215,6 +274,7 @@ html {
   z-index: 100;
   text-align: center;
 }
+
 
 .main-heading {
   font-family: "Great Vibes", cursive;
@@ -849,13 +909,21 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   html {
     font-size: 35%;
   }
 
+  .landing {
+    height: 72vh;
+  }
+
+  .banner {
+    top: 30%;
+  }
+
   .landing-contact {
-    height: 19rem;
+    height: 20rem;
     flex-direction: column;
     align-items: center;
   }
@@ -879,9 +947,6 @@ footer {
 }
 
 @media (max-width: 450px) {
-  .logo {
-    display: none;
-  }
 
   .input-group input,
   textarea,
