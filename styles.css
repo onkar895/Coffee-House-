@@ -171,9 +171,13 @@ html {
     display: block;
   }
 
+  .navbar {
+    padding: 30px;
+  }
+
   .navigation {
     position: fixed;
-    top: 8rem;
+    top: 10rem;
     left: 0;
     width: 100%;
     height: 0;
@@ -185,15 +189,19 @@ html {
   }
 
   .navigation a {
-    font-size: 1.6rem;
-    padding: 10px 45px;
+    font-size: 2.5rem;
+    padding: 10px 40px;
     width: 100%;
     display: block;
   }
 
+  .navigation a:nth-child(7) {
+    display: none;
+  }
+
   .navigation.open {
     padding: 20px 0;
-    height: 50rem;
+    height: 60vh;
   }
 }
 
@@ -215,12 +223,7 @@ html {
     max-width: 60rem;
     margin: 0 auto 2rem auto;
   }
-  
-  .menu-right-images {
-    width: 100%; /* Make images container full width */
-    padding: 0 2rem;
-  }
-  
+
   .customers-banner p {
     width: 90%; /* Instead of fixed 60rem */
     max-width: 60rem;
@@ -473,19 +476,20 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active::after {
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url(images/image8.jpg) center no-repeat;
-  background-size: cover;
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 15rem;
 }
 
 .menu-left {
-  text-align: right;
-  margin-right: 3rem;
-  width: 50%;
+ display: flex;
+ flex-direction: column;
 }
 
 .menu-left .main-heading {
   font-size: 6rem;
+  text-align: center;
 }
 
 .menu-left h1 {
@@ -493,7 +497,8 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active::after {
   font-weight: 300;
   text-transform: uppercase;
   color: #fff;
-  margin-top: -4rem;
+  margin-top: -2rem;
+  text-align: center;
 }
 
 .menu-left p {
@@ -505,8 +510,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active::after {
 }
 
 .menu-btn {
-  width: 15rem;
-  height: 5.5rem;
+  padding: 15px;
   cursor: pointer;
   margin: 0.1rem;
   font-size: 1.3rem;
@@ -523,24 +527,24 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active::after {
 }
 
 .menu-right {
-  margin-left: 3rem;
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.menu-right-images {
-  width: 60rem;
+.menu1, .menu2 {
   display: flex;
-  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .menu-img-wrapper {
   width: 25rem;
   height: 25rem;
-  margin: 2rem;
   overflow: hidden;
 }
 
-.menu-right-images img {
+.menu-img-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -707,21 +711,12 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active::after {
 /* Contact */
 .contact {
   width: 100%;
-  height: 60vh;
+  height: 80vh;
   background-color: #000;
-  display: flex;
-}
-
-.contact-left {
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
-    url(images/image1.jpg) center no-repeat;
-  background-size: cover;
 }
 
 .contact-right {
-  width: 50%;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -810,10 +805,6 @@ footer {
   html {
     font-size: 45%;
   }
-  .menu-img-wrapper {
-    width: 18rem;
-    height: 18rem;
-  }
 
   .customers {
     height: 120vh;
@@ -842,6 +833,7 @@ footer {
 
   .contact-right {
     width: 100%;
+    text-align: center;
   }
 
   .input-group input,
@@ -855,26 +847,9 @@ footer {
   .landing-contact div span:nth-child(2) {
     display: none;
   }
-  .menu{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   gap: 40px;
-  }
-
-  .menu-left {
-    width: 100%;
-    text-align: center;
-    margin-right: 0;
-  }
-
-  .menu-left p {
-    margin: 2rem auto 4rem auto;
-  }
 
   .customers {
-    height: 140vh;
+    height: 100vh;
   }
 
   .customers-banner p {
@@ -942,7 +917,11 @@ footer {
   }
 
   .customers {
-    height: 110vh;
+    height: 80vh;
+  }
+
+  .menu {
+    flex-direction: column;
   }
 }
 
